@@ -1,0 +1,208 @@
+/*Limpando formatações padrão*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-size: 1em;
+    font-family:sans-serif;
+    background: #222;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+header{
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-image: url("img/logo.png")center center/125px no-repeat;
+   
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+.hamburguer {
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border:0;
+
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer:after {
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left:15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+
+    background-color: #fff;
+
+
+
+}
+
+.hamburguer:before {
+    content:"";
+
+    position: absolute;
+    top: 55%;
+    left: 15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color:  #fff;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li{
+    margin-left: 10px;
+    
+}
+li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+a:hover{
+    color: #00BFFF;
+}
+
+#area-principal{
+   
+    width: 100%;
+   
+    height: 500px;
+    text-align:center;
+    padding: 25px 50px;
+    position:relative; 
+    margin-top: 150px;
+    
+}
+
+
+
+form{
+    background-color: white;
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+form h3{
+    text-align: center;
+    color: #778899;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form input[type=text],
+form input[type=mensagem]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+#mensagem{
+    height: 200px;
+    text-align:justify;
+}
+
+form input[type=submit]:hover{
+    background-color: #00BFFF;
+}
+form input[type=text]:focus{
+    outline: 0;
+}
+form input[type=mensagem]:focus{
+    outline: 0;
+     width: 100px;
+    
+}
+form input[type=submit]{
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    color: gray;
+    border: 0;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+/*mobile*/
+
+@media screen and(min-width:600px) and(max-width:980px){
+    .hamburguer{
+        display: block;
+        z-index: 999;
+    }
+    header{
+        height: 600px;
+        height: 600vh;
+        justify-content: center;
+    }
+
+    .menu{
+        position: fixed;
+        top:0;
+        right: -100%;
+        height: 100vh;
+        background-color: #222;
+        margin: 0;
+        flex-direction: column;
+        padding: 100px 20px;
+        width: 100%;
+        max-width: 250px;
+        transition: 0.5s ease;
+    }
+
+    .menu.active{
+        right: 0;
+    }
+}
+

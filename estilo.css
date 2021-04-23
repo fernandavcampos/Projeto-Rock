@@ -1,0 +1,300 @@
+/*Limpando formatações padrão*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  
+
+    font-size: 1em;
+    font-family:sans-serif;
+    background: #e6e6e6;
+    background-image: url("img/s1 ft1.png");
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+    min-width: 100vw; 
+   
+}
+
+header{
+    width: 100%;
+    min-width: 100vw;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-image: url("img/logo.png")center center/125px no-repeat;
+   
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+.hamburguer {
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border:0;
+
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer:after {
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left:15%;
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color: #fff;
+
+}
+
+.hamburguer:before {
+    content:"";
+
+    position: absolute;
+    top: 55%;
+    left: 15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color:  #fff;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li{
+    margin-left: 10px;
+    
+}
+li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+a:hover{
+    color: #00BFFF;
+}
+
+
+#area-principal{
+   
+    width: 100%;
+   
+    height: 500px;
+    text-align:center;
+    padding: 25px 50px;
+    position:relative; 
+    margin-top: 150px;
+    
+}
+
+h2{
+    font-size: 6.5em;
+    color:white;
+    font-family: sans-serif;
+    text-align: center;
+    width:100%;
+   
+    position:relative;
+    line-height: 100px;
+    padding: 5px;
+    
+}
+
+p{
+    color: white;
+    margin-top: 5%;
+    
+}
+
+.amarelo{
+    color: yellow;
+}
+
+
+.btn{
+    color: white;
+    background-color: #00BFFF;
+    position: absolute;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 12px;
+    width: 230px;
+    text-align: center;
+    padding: 10px;
+    font-family:  sans-serif;
+    top:90%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    height: 50px;
+    
+}
+
+/*mobile*/
+
+@media only screen and (max-width:980px){
+    .hamburguer{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu{
+        position: fixed;
+        top:0;
+        right: -100%;
+        height: 100vh;
+        background-color: #222;
+        margin: 0;
+        flex-direction: column;
+        padding: 100px 20px;
+        width: 100%;
+        max-width: 250px;
+        transition: 0.5s ease;
+    }
+
+    .menu.active{
+        right: 0;
+    }
+    header{
+        height: 600px;
+        height: 600vh;
+        justify-content: center;
+    }
+
+    
+}
+
+
+/*Responsividade*/
+
+tablet
+@media screen and (min-width:768px) {
+    
+
+     .hamburguer{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu{
+        position: fixed;
+        top:0;
+        right: -100%;
+        height: 100vh;
+        background-color: #222;
+        margin: 0;
+        flex-direction: column;
+        padding: 100px 20px;
+        width: 100%;
+        max-width: 250px;
+        transition: 0.5s ease;
+    }
+
+    .menu.active{
+        right: 0;
+    }
+    header{
+        height: 600px;
+        height: 600vh;
+        justify-content: center;
+    }
+
+    h2{
+        width: 100%;
+        text-align: center;
+    }
+    
+   
+
+    h2,  p{
+        width: 100%;
+
+    }
+     
+
+    /*celulares*/
+    @media screen and (min-width:600px) {
+        .hamburguer{
+            display: none;
+            z-index: 999;
+        }
+    
+        .menu{
+            position:fixed;
+            top:0;
+            right: -100%;
+            height: 100vh;
+            background-color: #222;
+            margin: 0;
+            flex-direction: column;
+            padding: 100px 20px;
+            width: 100%;
+            max-width: 250px;
+            transition: 0.5s ease;
+        }
+    
+        .menu.active{
+            right: 0;
+        }
+        header{
+            height: 600px;
+            height: 600vh;
+            justify-content: center;
+        }
+    
+        h2{
+            width: 100%;
+            text-align: center;
+        }
+        
+        
+        
+    }
+    
+    
+    
+
+
+
+
+
+
+
+
+
